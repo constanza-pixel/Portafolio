@@ -2,8 +2,8 @@
    Azul marino tomado del blazer de la foto; ámbar de señalética aeroportuaria. */
 :root {
   --marino: #16264a;
-  --acento: #f0a500;
-  --acento-hover: #d99400;
+  --acento: #38bdf8;
+  --acento-hover: #0ea5e9;
   --acento-texto: #16264a;
   --fondo: #f6f8fb;
   --fondo-alt: #e9eef5;
@@ -17,8 +17,8 @@
 
 [data-bs-theme="dark"] {
   --marino: #dbe4f5;
-  --acento: #f5b301;
-  --acento-hover: #ffc633;
+  --acento: #38bdf8;
+  --acento-hover: #0ea5e9;
   --acento-texto: #10182e;
   --fondo: #0d1424;
   --fondo-alt: #131c31;
@@ -27,7 +27,7 @@
   --texto: #e6ebf5;
   --texto-suave: #a3b0c9;
   --enlace: #8db6ff;
-  --pista: #f5b301;
+  --pista: #38bdf8;
 }
 
 /* ===== Base ===== */
