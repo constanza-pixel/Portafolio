@@ -1,0 +1,323 @@
+/* ===== Tokens de color (tema claro por defecto) =====
+   Azul marino tomado del blazer de la foto; ámbar de señalética aeroportuaria. */
+:root {
+  --marino: #16264a;
+  --acento: #f0a500;
+  --acento-hover: #d99400;
+  --acento-texto: #16264a;
+  --fondo: #f6f8fb;
+  --fondo-alt: #e9eef5;
+  --superficie: #ffffff;
+  --borde: #d3dbe6;
+  --texto: #1c2436;
+  --texto-suave: #55617a;
+  --enlace: #1d4fa3;
+  --pista: #16264a;
+}
+
+[data-bs-theme="dark"] {
+  --marino: #dbe4f5;
+  --acento: #f5b301;
+  --acento-hover: #ffc633;
+  --acento-texto: #10182e;
+  --fondo: #0d1424;
+  --fondo-alt: #131c31;
+  --superficie: #18233b;
+  --borde: #2a3856;
+  --texto: #e6ebf5;
+  --texto-suave: #a3b0c9;
+  --enlace: #8db6ff;
+  --pista: #f5b301;
+}
+
+/* ===== Base ===== */
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 1.075rem;
+  line-height: 1.65;
+  background-color: var(--fondo);
+  color: var(--texto);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+h1, h2, h3, h4, .navbar-brand { font-family: 'Sora', system-ui, sans-serif; color: var(--marino); }
+a { color: var(--enlace); }
+.text-secondary { color: var(--texto-suave) !important; }
+section[id] { scroll-margin-top: 70px; }
+
+:focus-visible { outline: 3px solid var(--acento); outline-offset: 3px; }
+
+/* ===== Navegación ===== */
+.barra {
+  position: relative;
+  padding-top: 7.5rem;
+  padding-bottom:4.5rem;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--fondo) 92%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--borde);
+}
+.barra .navbar-brand { font-size: 1.1rem; }
+.barra .nav-link { color: var(--texto); font-weight: 500; border-radius: 6px; padding: .45rem .8rem; }
+.barra .nav-link:hover { color: var(--enlace); }
+.barra .nav-link.active { color: var(--marino); box-shadow: inset 0 -3px 0 var(--acento); border-radius: 0; }
+.navbar-toggler { border-color: var(--borde); }
+[data-bs-theme="dark"] .navbar-toggler-icon { filter: invert(1); }
+
+.btn-tema {
+  border: 1px solid var(--borde);
+  background: var(--superficie);
+  color: var(--texto);
+  font-weight: 500;
+  display: inline-flex; align-items: center; gap: .4rem;
+}
+.btn-tema:hover { border-color: var(--acento); color: var(--texto); }
+
+/* ===== Botones ===== */
+.btn-acento {
+  background: var(--acento);
+  border-color: var(--acento);
+  color: var(--acento-texto);
+  font-weight: 600;
+}
+.btn-acento:hover, .btn-acento:focus { background: var(--acento-hover); border-color: var(--acento-hover); color: var(--acento-texto); }
+.btn-outline-contorno {
+  border: 2px solid var(--marino);
+  color: var(--marino);
+  font-weight: 600;
+}
+.btn-outline-contorno:hover { background: var(--marino); color: var(--fondo); }
+
+/* ===== Inicio ===== */
+.hero {
+  position: relative;
+  padding: 8.5rem 0 6rem;
+  padding-top: 7.5rem;
+  padding-bottom: 4.5rem;
+  overflow: hidden;
+}
+.hero-rol { color: var(--texto-suave); font-weight: 600; margin-bottom: 1rem; }
+.hero-titulo {
+  font-weight: 700;
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  line-height: 1.08;
+  letter-spacing: -.02em;
+  margin-bottom: 1.5rem;
+}
+.hero-texto { font-size: 1.2rem; max-width: 34em; color: var(--texto); }
+
+/* Retrato en arco, con marco desplazado en ámbar */
+.foto-marco {
+  position: relative;
+  width: 260px;
+  height: 320px;
+  max-width: 100%;
+  aspect-ratio: 4 / 5;
+  margin: 0 auto;
+  border-radius: 30px;
+  border: 4px solid var(--acento);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+.foto-marco::before {
+  content: "";
+  position: absolute; inset: 0;
+  transform: translate(14px, 14px);
+  border: 3px solid var(--acento);
+  border-radius: 999px 999px 22px 22px;
+}
+.foto {
+  position: relative;
+  width: 100%; 
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  border-radius: 999px 999px 22px 22px;
+  background: var(--superficie);
+}
+
+/* Línea central de pista al pie del inicio */
+.pista {
+  position: absolute; left: 0; right: 0; bottom: 1.5rem;
+  height: 4px;
+  background: repeating-linear-gradient(90deg, var(--pista) 0 34px, transparent 34px 60px);
+  opacity: .55;
+}
+
+/* ===== Secciones ===== */
+.seccion { padding: 5.5rem 0; }
+.seccion-alt { background: var(--fondo-alt); }
+.seccion-titulo {
+  font-weight: 700;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  letter-spacing: -.01em;
+  margin-bottom: 2.5rem;
+  padding-bottom: .75rem;
+  position: relative;
+}
+.seccion-titulo::after {
+  content: ""; position: absolute; left: 0; bottom: 0;
+  width: 72px; height: 5px; background: var(--acento); border-radius: 3px;
+}
+.seccion-intro { max-width: 40em; margin: -1rem 0 2.5rem; color: var(--texto-suave); }
+.subtitulo { font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; }
+
+.lista-limpia { list-style: none; padding: 0; margin: 0; }
+.lista-limpia li { padding: .6rem 0 .6rem 1rem; border-left: 3px solid var(--borde); margin-bottom: .5rem; }
+
+/* Datos personales */
+.ficha {
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-top: 5px solid var(--acento);
+  border-radius: 10px;
+  padding: 1.75rem;
+}
+.datos { margin: 0; }
+.datos dt { font-weight: 600; color: var(--texto-suave); font-size: .95rem; margin-top: 1rem; }
+.datos dt:first-child { margin-top: 0; }
+.datos dd { margin: 0; overflow-wrap: anywhere; }
+
+/* Habilidades */
+.habilidad {
+  height: 100%;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+.habilidad h4 { font-size: 1.05rem; font-weight: 600; margin-bottom: .6rem; }
+.habilidad p { margin: 0; font-size: 1rem; color: var(--texto-suave); }
+
+/* ===== Línea de tiempo ===== */
+.linea-tiempo { position: relative; padding-left: 1.75rem; border-left: 3px dashed var(--borde); }
+.hito { position: relative; display: grid; gap: .5rem 2rem; grid-template-columns: 1fr; }
+.hito::before {
+  content: ""; position: absolute; left: calc(-1.75rem - 9px); top: .35rem;
+  width: 15px; height: 15px; border-radius: 50%;
+  background: var(--acento); border: 3px solid var(--fondo-alt); box-shadow: 0 0 0 2px var(--acento);
+}
+.hito-periodo { font-family: 'Sora', sans-serif; font-weight: 600; color: var(--marino); }
+.hito-cuerpo {
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  padding: 1.75rem;
+}
+.hito-cuerpo h3 { font-size: 1.3rem; font-weight: 600; margin-bottom: .25rem; }
+.hito-empresa { color: var(--texto-suave); font-weight: 600; margin-bottom: 1rem; }
+.hito-cuerpo ul { padding-left: 1.2rem; margin: 0; }
+.hito-cuerpo li { margin-bottom: .55rem; }
+.hito-cuerpo li::marker { color: var(--acento); }
+
+@media (min-width: 992px) {
+  .hito { grid-template-columns: 150px 1fr; }
+}
+
+/* ===== Proyectos ===== */
+.proyecto {
+  height: 100%;
+  display: flex; flex-direction: column;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+.proyecto-modulo { font-weight: 600; font-size: .95rem; color: var(--texto-suave); margin-bottom: .35rem; }
+.proyecto h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: .6rem; }
+.proyecto p { color: var(--texto); font-size: 1rem; }
+.etiquetas { list-style: none; padding: 0; margin: .25rem 0 1.25rem; display: flex; flex-wrap: wrap; gap: .4rem; }
+.etiquetas li {
+  font-size: .88rem; font-weight: 500;
+  padding: .15rem .65rem;
+  border: 1px solid var(--borde);
+  border-radius: 999px;
+  color: var(--texto-suave);
+  background: var(--fondo);
+}
+.proyecto .btn { align-self: flex-start; }
+/* ===== Caso de estudio destacado ===== */
+.caso-estudio-tarjeta {
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-top: 5px solid var(--acento);
+  border-radius: 12px;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.badge-acento {
+  background: color-mix(in srgb, var(--acento) 20%, transparent);
+  color: var(--marino);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--acento);
+}
+
+.caso-titulo {
+  font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.caso-bloque {
+  height: 100%;
+  background: var(--fondo);
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.caso-bloque h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--marino);
+}
+
+.caso-bloque p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--texto-suave);
+}
+
+.metrica-item {
+  flex: 1;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+  padding: 0.5rem;
+}
+
+.metrica-valor {
+  display: block;
+  font-family: 'Sora', sans-serif;
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: var(--marino);
+}
+
+.metrica-etiqueta {
+  font-size: 0.75rem;
+  color: var(--texto-suave);
+}
+
+/* ===== Pie ===== */
+.pie { padding: 1.5rem 0; border-top: 1px solid var(--borde); color: var(--texto-suave); font-size: .95rem; }
+
+/* ===== Móvil ===== */
+@media (max-width: 575.98px) {
+  .hero { padding: 7rem 0 5rem; }
+  .seccion { padding: 4rem 0; }
+  .foto-marco { width: min(78%, 300px); }
+  .linea-tiempo { padding-left: 1.25rem; }
+  .hito::before { left: calc(-1.25rem - 9px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}

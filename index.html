@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Constanza Yáñez Osses | Portafolio</title>
+  <meta name="description" content="Portafolio de Constanza Yáñez Osses: Ingeniera en Prevención de Riesgos, Calidad y Medio Ambiente, con experiencia en seguridad aeroportuaria y proyectos de desarrollo web.">
+
+  <!-- Aplica el tema guardado antes de pintar la página para evitar parpadeos -->
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('tema'); } catch (e) {}
+      if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-bs-theme', t);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#menu" data-bs-offset="90" tabindex="0">
+
+  <!-- Navegación -->
+  <nav class="navbar navbar-expand-lg fixed-top barra">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#inicio">Constanza Yáñez</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+<li class="nav-item"><a class="nav-link" href="#caso-estudio">Caso de estudio</a></li>
+<li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+            <button id="btnTema" class="btn btn-sm btn-tema" type="button" aria-label="Cambiar a tema oscuro" aria-pressed="false">
+              <span id="iconoTema" aria-hidden="true">☾</span>
+              <span id="textoTema">Tema oscuro</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- INICIO -->
+    <section id="inicio" class="hero">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7 order-2 order-lg-1 text-center text-lg-star">
+            <p class="hero-rol">Seguridad operacional · Calidad · Prevención de riesgos</p>
+            <h1 class="hero-titulo">Constanza Belén<br>Yáñez Osses</h1>
+            <p class="hero-texto">
+              Ingeniera en Prevención de Riesgos, Calidad y Medio Ambiente. Llevo nueve años cuidando que operaciones críticas
+              cumplan la norma sin detenerse, y hoy sumo el desarrollo web a esa forma de trabajar.
+            </p>
+            <div class="d-flex flex-wrap gap-2 mt-4 justify-content-center justify-content-lg-start">
+              <a href="#proyectos" class="btn btn-acento btn-lg">Ver proyectos</a>
+              <a href="#contacto" class="btn btn-outline-contorno btn-lg">Contactarme</a>
+            </div>
+          </div>
+          <div class="col-lg-5 order-1 order-lg-2 text-center">
+            <div class="foto-marco mx-auto">
+              <img src="img/foto.jpg" alt="Retrato de Constanza Yáñez Osses" class="foto img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pista" aria-hidden="true"></div>
+    </section>
+
+    <!-- QUIÉN SOY -->
+    <section id="quien-soy" class="seccion">
+      <div class="container">
+        <h2 class="seccion-titulo">Quién soy</h2>
+
+        <div class="row g-5">
+          <div class="col-lg-7">
+            <h3 class="subtitulo">Perfil profesional</h3>
+            <p>
+              Ingeniera en Prevención de Riesgos, Calidad y Medio Ambiente con una sólida trayectoria técnica y operativa en la
+              Dirección General de Aeronáutica Civil (DGAC). Me especializo en implementar, supervisar y fiscalizar normativas de
+              seguridad, en el aseguramiento de la calidad y en la gestión preventiva de riesgos en entornos críticos y regulados.
+            </p>
+            <p>
+              Me caracterizo por la rigurosidad al cumplir protocolos, el control de accesos, la inspección tecnológica y la
+              resolución de incidentes bajo presión. He liderado planes de contingencia, redactado informes técnicos y trabajado
+              con equipos multidisciplinarios y entidades públicas.
+            </p>
+
+            <h3 class="subtitulo mt-5">Formación</h3>
+            <ul class="lista-limpia">
+              <li><strong>Ingeniería en Prevención de Riesgos, Calidad y Medio Ambiente</strong><br><span class="text-secondary">Instituto Profesional IPLACEX</span></li>
+              <li><strong>Técnico de Nivel Superior en Seguridad Aeroportuaria</strong><br><span class="text-secondary">Escuela Técnica Aeronáutica (DGAC), 2016</span></li>
+            </ul>
+
+            <h3 class="subtitulo mt-5">Certificaciones</h3>
+            <ul class="lista-limpia">
+              <li><strong>Google AI Essentials Specialization</strong><br><span class="text-secondary">Google. Incluye prompting, uso productivo de herramientas de IA y uso responsable de la IA.</span></li>
+              <li><strong>Normativa Aeronáutica y Protocolos AVSEC/OACI</strong><br><span class="text-secondary">DGAC</span></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="ficha">
+              <h3 class="subtitulo">Datos personales</h3>
+              <dl class="datos">
+                <dt>Nombre</dt><dd>Constanza Belén Yáñez Osses</dd>
+                <dt>Ubicación</dt><dd>Concepción, Región del Biobío, Chile</dd>
+                <dt>Profesión</dt><dd>Ingeniera en Prevención de Riesgos, Calidad y Medio Ambiente</dd>
+                <dt>Correo</dt><dd><a href="mailto:cbeleny18@gmail.com">cbeleny18@gmail.com</a></dd>
+                <dt>Teléfono</dt><dd><a href="tel:+56942960016">+56 9 4296 0016</a></dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="subtitulo mt-5">Habilidades y competencias</h3>
+        <div class="row g-4">
+          <div class="col-md-6 col-xl-3">
+            <div class="habilidad">
+              <h4>Seguridad y prevención</h4>
+              <p>Identificación de peligros y evaluación de riesgos (IPER), protocolos de emergencia, mitigación de riesgos operacionales, fiscalización y control normativo.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <div class="habilidad">
+              <h4>Gestión de calidad y procesos</h4>
+              <p>Estandarización de procedimientos (SOP), control documental, seguimiento de no conformidades, auditorías internas y aseguramiento de calidad (QA).</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <div class="habilidad">
+              <h4>Herramientas y productividad</h4>
+              <p>Operación de sistemas de inspección técnica, herramientas de productividad asistidas por IA (Google AI Tools) y redacción de informes técnicos.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <div class="habilidad">
+              <h4>Competencias transversales</h4>
+              <p>Pensamiento analítico, resolución estructurada de problemas, trabajo bajo presión, adaptabilidad, liderazgo operativo y trabajo en equipo multidisciplinario.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCIA -->
+    <section id="experiencia" class="seccion seccion-alt">
+      <div class="container">
+        <h2 class="seccion-titulo">Experiencia laboral</h2>
+
+        <div class="linea-tiempo">
+          <article class="hito">
+            <div class="hito-periodo">2017 – 2026</div>
+            <div class="hito-cuerpo">
+              <h3>Técnico de Nivel Superior en Seguridad Aeroportuaria (AVSEC)</h3>
+              <p class="hito-empresa">Dirección General de Aeronáutica Civil (DGAC)</p>
+              <ul>
+                <li>Supervisión, fiscalización y aseguramiento del cumplimiento continuo de las normativas aeronáuticas nacionales e internacionales (OACI), bajo estándares de calidad y seguridad operacional.</li>
+                <li>Operación, diagnóstico y monitoreo de sistemas tecnológicos de seguridad e inspección no intrusiva para detectar, controlar y mitigar riesgos de forma preventiva.</li>
+                <li>Detección, análisis y gestión rápida de contingencias e incidentes críticos, garantizando la continuidad y regularidad operativa en ambientes de alta exigencia.</li>
+                <li>Elaboración de informes técnicos de incidentes, control documental de procedimientos, auditorías de campo y reporte de no conformidades.</li>
+                <li>Coordinación y comunicación operativa con autoridades aeroportuarias, instituciones policiales y entidades fiscalizadoras, y atención a usuarios.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="seccion">
+      <div class="container">
+        <h2 class="seccion-titulo">Proyectos</h2>
+        <p class="seccion-intro">Seis proyectos de mi formación en desarrollo web, desde interfaces con HTML y CSS hasta aplicaciones con Vue.js. Cada tarjeta abre el proyecto publicado.</p>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-xl-4">
+            <article class="proyecto">
+              <div class="proyecto-modulo"></div>
+              <h3>Alke Wallet</h3>
+              <p>Simulador de billetera digital con pantallas de inicio de sesión y registro.</p>
+              <ul class="etiquetas"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+              <a class="btn btn-acento btn-sm mt-auto" href="https://constanza-pixel.github.io/Proyecto-modulo-2/" target="_blank" rel="noopener">Ver proyecto<span class="visually-hidden">: Alke Wallet</span></a>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <article class="proyecto">
+              <div class="proyecto-modulo"></div>
+              <h3>SmartBudget</h3>
+              <p>Sitio web para controlar finanzas personales: beneficios, funcionalidades de ingresos, gastos, metas y reportes, y formulario de contacto.</p>
+              <ul class="etiquetas"><li>HTML</li><li>CSS</li><li>Diseño responsivo</li></ul>
+              <a class="btn btn-acento btn-sm mt-auto" href="https://constanza-pixel.github.io/Proyecto-modulo-3/" target="_blank" rel="noopener">Ver proyecto<span class="visually-hidden">: SmartBudget</span></a>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <article class="proyecto">
+              <div class="proyecto-modulo"></div>
+              <h3>Aplicación de consola</h3>
+              <p>Aplicación que funciona en la consola del navegador, para practicar la lógica de programación con JavaScript.</p>
+              <ul class="etiquetas"><li>JavaScript</li><li>Lógica de programación</li></ul>
+              <a class="btn btn-acento btn-sm mt-auto" href="https://constanza-pixel.github.io/Proyecto-m-dulo-4/" target="_blank" rel="noopener">Ver proyecto<span class="visually-hidden">: Aplicación de consola</span></a>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <article class="proyecto">
+              <div class="proyecto-modulo"></div>
+              <h3>TaskFlow</h3>
+              <p>Gestor de tareas donde se pueden agregar pendientes y organizar el trabajo diario.</p>
+              <ul class="etiquetas"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+              <a class="btn btn-acento btn-sm mt-auto" href="https://constanza-pixel.github.io/Proyecto-Modulo-5/" target="_blank" rel="noopener">Ver proyecto<span class="visually-hidden">: TaskFlow</span></a>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <article class="proyecto">
+              <div class="proyecto-modulo"></div>
+              <h3>BookList SPA · Editorial Nova</h3>
+              <p>Aplicación de página única para gestionar un catálogo de libros, con registro de usuarios, rutas protegidas, detalle por libro y datos que se conservan al recargar.</p>
+              <ul class="etiquetas"><li>Vue 3</li><li>Vuex</li><li>Vue Router</li><li>localStorage</li></ul>
+              <a class="btn btn-acento btn-sm mt-auto" href="https://constanza-pixel.github.io/proyectobooklist/" target="_blank" rel="noopener">Ver proyecto<span class="visually-hidden">: BookList SPA</span></a>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <article class="proyecto">
+              <div class="proyecto-modulo"></div>
+              <h3>Vue product showcase</h3>
+              <p>Catálogo interactivo de productos que consume una API REST, con filtros por categoría, favoritos, tema claro y oscuro, y pruebas automatizadas.</p>
+              <ul class="etiquetas"><li>Vue.js</li><li>Vuex</li><li>Axios</li><li>BootstrapVue</li><li>Jest</li><li>Cypress</li></ul>
+              <a class="btn btn-acento btn-sm mt-auto" href="https://constanza-pixel.github.io/ProyectoM7/" target="_blank" rel="noopener">Ver proyecto<span class="visually-hidden">: Vue product showcase</span></a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASO DE ESTUDIO DESTACADO (EVALUACIÓN ALKEMY) -->
+    <section id="caso-estudio" class="seccion seccion-alt">
+      <div class="container">
+        <h2 class="seccion-titulo">Caso de estudio destacado</h2>
+        <p class="seccion-intro">
+          Análisis técnico en profundidad del desarrollo de una aplicación web interactiva con arquitectura de componentes desacoplada, consumo de API REST y optimización de rendimiento.
+        </p>
+
+        <article class="caso-estudio-tarjeta">
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+            <div class="d-flex gap-2">
+              <a href="https://constanza-pixel.github.io/ProyectoM7/" target="_blank" rel="noopener" class="btn btn-acento btn-sm">Ver demo en vivo</a>
+              <a href="https://github.com/constanza-pixel/ProyectoM7" target="_blank" rel="noopener" class="btn btn-outline-contorno btn-sm">Repositorio GitHub</a>
+            </div>
+          </div>
+
+          <h3 class="caso-titulo">Vue Product Showcase: Aplicación Web Dinámica y Responsiva</h3>
+
+          <!-- Grid de los 8 puntos requeridos por la consigna -->
+          <div class="row g-4 mt-2">
+            <!-- 1. Descripción -->
+            <div class="col-lg-6">
+              <div class="caso-bloque">
+                <h4>1. Descripción de la actividad</h4>
+                <p>
+                  Desarrollo de la interfaz de usuario para un catálogo interactivo de productos con carga asíncrona, filtrado reactivo por categorías, gestión de favoritos en el cliente y soporte multi-tema (claro/oscuro).
+                </p>
+              </div>
+            </div>
+
+            <!-- 2. Desafío principal -->
+            <div class="col-lg-6">
+              <div class="caso-bloque">
+                <h4>2. Desafío principal</h4>
+                <p>
+                  Evitar llamadas redundantes a la API externa al alternar filtros, previniendo retrasos en el renderizado y asegurando una navegación fluida en dispositivos móviles con conexiones inestables.
+                </p>
+              </div>
+            </div>
+
+            <!-- 3. Solución técnica -->
+            <div class="col-lg-6">
+              <div class="caso-bloque">
+                <h4>3. Solución técnica propuesta</h4>
+                <p>
+                  Estructuración del estado centralizado mediante Vuex con caché local en <code>localStorage</code>, desacoplamiento de componentes reutilizables y carga diferida (<em>lazy loading</em>) en elementos multimedia.
+                </p>
+              </div>
+            </div>
+
+            <!-- 4. Herramientas técnicas -->
+            <div class="col-lg-6">
+              <div class="caso-bloque">
+                <h4>4. Herramientas técnicas utilizadas</h4>
+                <p>
+                  Vue.js (Vuex, Vue Router), Axios para consumo asíncrono de API REST, BootstrapVue / Bootstrap 5, Jest y Cypress para pruebas automatizadas, y Git/GitHub para control de versiones.
+                </p>
+              </div>
+            </div>
+
+            <!-- 5. Principales aprendizajes -->
+            <div class="col-lg-6">
+              <div class="caso-bloque">
+                <h4>5. Principales aprendizajes</h4>
+                <p>
+                  Gestión del flujo unidireccional de datos en SPA, manejo estructurado de excepciones HTTP con Axios interceptors y diseño centrado en accesibilidad (WCAG) y navegación por teclado.
+                </p>
+              </div>
+            </div>
+
+            <!-- 6. Métricas de impacto -->
+            <div class="col-lg-6">
+              <div class="caso-bloque">
+                <h4>6. Métricas de impacto logradas</h4>
+                <div class="d-flex gap-3 text-center my-2">
+                  <div class="metrica-item">
+                    <span class="metrica-valor">95+</span>
+                    <span class="metrica-etiqueta">Google Lighthouse</span>
+                  </div>
+                  <div class="metrica-item">
+                    <span class="metrica-valor">-40%</span>
+                    <span class="metrica-etiqueta">Tiempo de carga LCP</span>
+                  </div>
+                  <div class="metrica-item">
+                    <span class="metrica-valor">100%</span>
+                    <span class="metrica-etiqueta">Diseño responsivo</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 7. Habilidades técnicas aplicadas -->
+            <div class="col-lg-6">
+              <div class="caso-bloque">
+                <h4>7. Habilidades técnicas aplicadas</h4>
+                <p>
+                  Arquitectura Single Page Application (SPA), consumo de endpoints RESTful, modularización de estilos CSS/SASS, diseño Mobile-First y documentación técnica del repositorio en <code>README.md</code>.
+                </p>
+              </div>
+            </div>
+
+            <!-- 8. Justificación -->
+            <div class="col-lg-6">
+              <div class="caso-bloque">
+                <h4>8. Justificación de la elección</h4>
+                <p>
+                  Sintetiza la culminación de la ruta técnica: integra arquitectura por componentes, pruebas, consumo asíncrono y control de estados, demostrando capacidad para construir productos web funcionales listos para producción.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="seccion seccion-alt">
+      <div class="container">
+        <h2 class="seccion-titulo">Contacto</h2>
+        <p class="seccion-intro">¿Tienes una oportunidad, una consulta o quieres conversar sobre seguridad, calidad o desarrollo web? Escríbeme.</p>
+        <div class="d-flex flex-wrap gap-3">
+          <a class="btn btn-acento btn-lg" href="mailto:cbeleny18@gmail.com">Enviar un correo al cbeleny18@gmail.com</a>
+          <a class="btn btn-outline-contorno btn-lg" href="tel:+56942960016">Llamar al +56 9 4296 0016</a>
+        </div>
+        <p class="mt-4 mb-0 text-secondary">Concepción, Región del Biobío, Chile</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="container d-flex flex-wrap justify-content-between gap-2">
+      <span>© <span id="anio"></span> Constanza Yáñez Osses</span>
+      <a href="#inicio">Volver al inicio</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
